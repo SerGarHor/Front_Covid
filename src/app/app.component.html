@@ -1,0 +1,22 @@
+<div class="main">
+  <h2>Filtre por medio del campo 🦠</h2>
+  <div class="search-container">
+    <input type="text" (input)="buscarDepartamentos()" [(ngModel)]="departamentoInput" class="search-input">
+  </div>
+
+  <h2>Datos de COVID 😷</h2>
+  <div class="contenedor" *ngFor="let departamento of departamentos">
+    <div>
+      <h3>Departamento 🏢</h3>
+      <p>{{departamento.nom_territorio}}</p>
+    </div>
+    <div>
+      <h3>Año 🐉</h3>
+      <p>{{departamento.a_o}}</p>
+    </div>
+    <div>
+      <h3>Cantidad de dosis aplicadas 💉</h3>
+      <p>{{departamento.cantidad_dosis_aplicadas}}</p>
+    </div>
+  </div>
+</div>
